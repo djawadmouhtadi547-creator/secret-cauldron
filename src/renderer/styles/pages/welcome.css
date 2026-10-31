@@ -1,0 +1,27 @@
+.welcome-screen { flex:1; min-height:0; position:relative; display:grid; place-items:center; padding:30px; overflow:hidden; background:radial-gradient(ellipse at 50% -5%,rgba(124,39,22,.25),transparent 48%),radial-gradient(ellipse at 50% 40%,rgba(66,19,15,.13),transparent 58%),#000; }
+.welcome-card { width:min(445px,calc(100vw - 42px)); position:relative; padding:38px 42px 36px; border:1px solid rgba(239,68,68,.18); border-radius:24px; background:linear-gradient(180deg,rgba(22,13,13,.94),rgba(8,8,8,.98)); box-shadow:0 25px 90px rgba(0,0,0,.48),0 0 50px rgba(220,38,38,.06); text-align:center; }
+.welcome-card::before { content:""; position:absolute; height:1px; top:-1px; inset-inline:15%; background:linear-gradient(90deg,transparent,#f97316,transparent); box-shadow:0 0 14px rgba(249,115,22,.48); }
+.welcome-close { position:absolute; top:13px; inset-inline-end:13px; width:30px; height:30px; display:grid; place-items:center; border:1px solid var(--border); border-radius:9px; color:var(--text-muted); background:transparent; cursor:pointer; }
+.welcome-close:hover { background:var(--surface-3); color:var(--text); }
+.welcome-brand-mark { width:84px; height:84px; margin:0 auto 18px; display:grid; place-items:center; border-radius:25px; background:linear-gradient(140deg,rgba(34,197,94,.1),rgba(34,197,94,.025)); border:1px solid rgba(74,222,128,.12); box-shadow:0 12px 35px rgba(0,0,0,.2); }
+.welcome-brand-mark img { width:72px; height:72px; }
+.welcome-card h1,.welcome-reopen h1 { font-size:21px; letter-spacing:-.4px; margin:0 0 7px; font-weight:800; }
+.welcome-subtitle { color:var(--text-muted); margin:0 0 25px; font-size:12px; }
+.welcome-actions { display:flex; flex-direction:column; gap:10px; }
+.welcome-auth-button { height:48px; width:100%; font-size:13px; border-radius:12px; }
+.welcome-auth-button .icon { width:21px; height:21px; }
+.welcome-copyright { position:absolute; bottom:22px; inset-inline:20px; text-align:center; margin:0; color:#5a5555; font-size:10px; }
+.welcome-version { position:absolute; bottom:19px; inset-inline-end:24px; font-size:10px; color:#5e5656; }
+.welcome-back { display:flex; margin:0 0 24px; padding:0; border:0; background:transparent; color:var(--text-muted); font-size:11px; cursor:pointer; }
+.welcome-back:hover { color:var(--text); }
+.offline-form { text-align:start; display:flex; flex-direction:column; gap:8px; }
+.offline-form label { color:var(--text-muted); font-size:11px; font-weight:650; }
+.offline-input { direction:ltr; text-align:start; height:46px; border-color:rgba(239,68,68,.26); }
+.offline-input:focus { border-color:#ef4444; box-shadow:0 0 0 1px #ef4444,0 0 0 4px rgba(239,68,68,.11); }
+.field-hint { font-size:10px; color:var(--text-dim); }
+.offline-submit { width:100%; height:44px; margin-top:10px; }
+.offline-info { display:flex; align-items:flex-start; gap:8px; margin-top:19px; padding:11px 12px; border:1px solid rgba(59,130,246,.14); border-radius:10px; color:#8796aa; background:rgba(59,130,246,.06); text-align:start; font-size:10px; }
+.offline-info .icon { color:#60a5fa; }
+.welcome-reopen { display:flex; flex-direction:column; align-items:center; gap:15px; }
+.welcome-logo { width:80px; height:80px; }
+@media(max-height:700px) { .welcome-card { padding:26px 36px; } .welcome-brand-mark { width:66px;height:66px;margin-bottom:12px; } .welcome-brand-mark img { width:58px;height:58px; } }

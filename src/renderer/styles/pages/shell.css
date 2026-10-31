@@ -1,0 +1,61 @@
+.sidebar { position:relative; }
+.sidebar-logo { width:38px;height:38px;object-fit:contain; margin-bottom:2px; }
+.avatar-button { width:43px;height:43px; display:grid;place-items:center; position:relative; border:1px solid var(--border-strong); border-radius:13px; background:var(--surface-2); color:var(--text-muted); cursor:pointer; }
+.avatar-button img { width:100%;height:100%;object-fit:cover;border-radius:12px; }
+.avatar-button .connected-dot { position:absolute; bottom:2px; inset-inline-end:2px; width:8px;height:8px; border:2px solid var(--surface); margin:0; }
+.sidebar-separator { width:34px;height:1px;background:var(--border-strong); margin:2px 0; }
+.sidebar-nav { width:100%; display:flex; flex-direction:column; align-items:center; gap:7px; }
+.nav-item,.sidebar-action { width:46px;height:46px;display:grid;place-items:center;position:relative;border:1px solid transparent;border-radius:13px;background:transparent;color:var(--text-muted);cursor:pointer;transition:all var(--transition); }
+.nav-item .icon,.sidebar-action .icon { width:21px;height:21px; }
+.nav-item:hover,.sidebar-action:hover { color:var(--text);background:var(--surface-3); }
+.nav-item.active,.instance-shortcut.active { color:#fff;background:linear-gradient(135deg,var(--accent-from),var(--accent-to));box-shadow:0 5px 17px color-mix(in srgb,var(--accent-to) 16%,transparent); }
+.sidebar-spacer { flex:1; }
+.instance-shortcuts { display:flex;flex-direction:column;align-items:center;gap:7px;max-height:230px;overflow:auto;width:100%;padding-block:1px; }
+.instance-shortcut { width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border:1px solid var(--border);border-radius:12px;background:var(--surface-2);color:var(--text-muted);cursor:pointer; }
+.instance-shortcut .icon { width:18px;height:18px; }
+.instance-shortcut:hover { border-color:var(--accent);color:var(--text); }
+.sidebar-chevron { width:28px;height:24px;border:0;background:transparent;color:var(--text-dim);cursor:pointer; }
+.sidebar-bottom { display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;margin-top:auto; }
+.account-popover { width:270px; padding:13px; background:var(--surface-2);border:1px solid var(--border-strong);border-radius:15px;box-shadow:0 18px 60px rgba(0,0,0,.48); }
+.account-popover-user { display:flex;align-items:center;gap:10px;padding:3px 2px 12px; }
+.account-avatar-large { width:42px;height:42px;display:grid;place-items:center;position:relative;border-radius:12px;background:var(--surface-3);color:var(--text-muted); }
+.account-avatar-large i { position:absolute;bottom:0;inset-inline-end:0;width:9px;height:9px;border:2px solid var(--surface-2);border-radius:50%;background:var(--success); }
+.account-popover-name { display:flex;flex-direction:column;gap:2px;flex:1; }
+.account-popover-name strong { font-size:12px; }
+.account-popover-name small,.account-switch-row small { font-size:9px;color:var(--text-muted); }
+.account-divider { height:1px;background:var(--border);margin:7px 0; }
+.account-list-label { padding:5px 3px;color:var(--text-dim);font-size:9px; }
+.account-switch-row { width:100%;display:flex;align-items:center;gap:9px;padding:8px 4px;border:0;background:transparent;text-align:start;border-radius:8px;cursor:pointer; }
+.account-switch-row:hover { background:var(--surface-3); }
+.account-switch-row > span:last-child { display:flex;flex-direction:column;gap:1px; }
+.account-switch-row strong { font-size:10px; }
+.account-mini-avatar { width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:var(--surface-3); }
+.account-mini-avatar .icon { width:15px;height:15px; }
+.account-add { width:100%; }
+.account-logout { margin-top:7px;width:100%;padding:8px 10px;display:flex;align-items:center;gap:8px;border:0;border-radius:8px;background:transparent;color:#f87171;text-align:start;cursor:pointer;font-size:10px; }
+.account-logout:hover { background:rgba(239,68,68,.1); }
+.structural-page { min-height:100%;display:flex;flex-direction:column; }
+.structural-placeholder { flex:1;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;background:radial-gradient(circle at 50% 40%,rgba(239,68,68,.055),transparent 55%),var(--surface-2); }
+.structural-icon { width:66px;height:66px;border-radius:20px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 18%,transparent); }
+.structural-icon .icon { width:28px;height:28px; }
+.structural-placeholder h2 { margin:18px 0 6px;font-size:17px; }
+.structural-placeholder p { margin:0;color:var(--text-muted);font-size:11px; }
+.stage-progress { width:190px;height:4px;border-radius:10px;background:var(--surface-3);overflow:hidden;margin-top:24px; }
+.stage-progress span { display:block;width:25%;height:100%;background:linear-gradient(90deg,var(--accent-from),var(--accent-to));border-radius:10px; }
+.structural-placeholder small { color:var(--text-dim);font-size:9px;margin-top:9px; }
+.layout-classic .app-shell { grid-template-columns:188px minmax(0,1fr) 270px; }
+.layout-classic .sidebar { align-items:stretch;padding:12px; }
+.layout-classic .sidebar-nav { align-items:stretch; }
+.layout-classic .nav-item { width:100%;height:40px;display:flex;justify-content:flex-start;padding-inline:12px;gap:12px; }
+.layout-classic .nav-item::after { content:attr(data-label);font-size:11px;font-weight:600; }
+.layout-classic .nav-item .tooltip { display:none; }
+.layout-classic .sidebar-logo { align-self:center; }
+.layout-classic .sidebar-bottom { align-items:stretch; }
+.layout-classic .sidebar-bottom .sidebar-action { width:100%;display:flex;justify-content:flex-start;padding-inline:12px;gap:12px; }
+#overlay-root { position:relative; z-index:70; }
+.account-popover { position:fixed; z-index:75; top:54px; inset-inline-start:96px; }
+.layout-classic .account-popover { inset-inline-start:198px; }
+.inline-info { display:flex;align-items:flex-start;gap:12px;color:var(--text-muted);font-size:11px;line-height:1.7; }
+.inline-info .icon { color:var(--info);flex:0 0 auto;margin-top:2px; }
+.inline-info p { margin:0; }
+.language-indicator { font-family:var(--font-mono);font-size:10px;font-weight:800; }
