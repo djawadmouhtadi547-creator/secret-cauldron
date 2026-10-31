@@ -7,8 +7,11 @@
   "private": true,
   "type": "module",
   "main": "src/main/index.js",
+  
+{
   "scripts": {
     "start": "electron .",
+    "postinstall": "node scripts/copy-vendor-assets.js",
     "build": "electron-builder --win nsis --x64",
     "build:linux": "electron-builder --linux AppImage --x64",
     "pack": "electron-builder --dir",
@@ -20,7 +23,8 @@
     "check:syntax": "node scripts/check-syntax.js",
     "check:secrets": "node scripts/check-secrets.js",
     "validate": "npm run check && npm run check:syntax && npm run check:secrets && npm test"
-  },
+  }
+}
   "dependencies": {
     "archiver": "7.0.1",
     "extract-zip": "2.0.1",
