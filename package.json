@@ -1,3 +1,4 @@
+
 {
   "name": "prime-launcher",
   "version": "0.4.0-beta.1",
@@ -10,8 +11,8 @@
   "scripts": {
     "start": "electron .",
     "postinstall": "node scripts/copy-vendor-assets.js",
-    "build": "electron-builder --win nsis --x64",
-    "build:linux": "electron-builder --linux AppImage --x64",
+    "build": "electron-builder --win nsis --x64 --publish never",
+    "build:linux": "electron-builder --linux AppImage --x64 --publish never",
     "pack": "electron-builder --dir",
     "check": "node scripts/check-project.js",
     "test": "node --test tests/*.test.js",
@@ -49,9 +50,7 @@
       "THIRD_PARTY_NOTICES.md"
     ],
     "win": {
-      "target": [
-        "nsis"
-      ],
+      "target": ["nsis"],
       "icon": "assets/logo/prime.ico"
     },
     "nsis": {
@@ -61,9 +60,7 @@
       "createStartMenuShortcut": true
     },
     "linux": {
-      "target": [
-        "AppImage"
-      ],
+      "target": ["AppImage"],
       "category": "Game"
     },
     "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
