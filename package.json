@@ -20,7 +20,7 @@
     "validate": "npm run check && npm run check:syntax && npm run check:secrets && npm test"
   },
   "dependencies": {
-    "archiver": "7.0.1",
+    "archiver": "8.0.0",
     "extract-zip": "2.0.1",
     "tar": "7.4.3",
     "skinview3d": "3.4.2"
